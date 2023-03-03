@@ -10,3 +10,14 @@ dependencies:
   - ipympl
   - netcdf4
   - rioxarray
+  - pip
+  - spyder
+  # to avoid autocompletion issues with the latest spyder version
+  - pyzmq=24.0.1 
+  - ipython=7.33
+  
+  # Required for jupyter-desktop-server
+  - websockify
+  - nbgitpuller
+  - pip:
+    - jupyter-desktop-server
