@@ -1,0 +1,26 @@
+dependencies:
+- python <3.9
+- spyder 5.4.2
+- cython
+- matplotlib
+- pandas
+- pillow
+- scikit-learn
+- scipy
+- sympy
+# EOmaps Workshop dependencies
+- eomaps=6.1.1
+- netcdf4
+- rioxarray
+- spyder
+# to avoid autocompletion issues with the latest spyder version
+- pyzmq=24.0.1 
+- ipython=7.33
+# This is required to avoid conda complaining about it.
+- pip
+
+# Required for jupyter-desktop-server
+- websockify
+- nbgitpuller
+- pip:
+    - jupyter-desktop-server
