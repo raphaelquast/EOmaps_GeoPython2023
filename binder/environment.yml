@@ -13,7 +13,7 @@ dependencies:
 - netcdf4
 - rioxarray
 - spyder
-# to avoid autocompletion issues with the latest spyder version
+# avoid autocompletion issues with the latest spyder version
 - pyzmq=24.0.1 
 - ipython=7.33
 # This is required to avoid conda complaining about it.
