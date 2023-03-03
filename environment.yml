@@ -12,7 +12,7 @@ dependencies:
   - rioxarray
   - pip
   - spyder
-  # to avoid autocompletion issues with the latest spyder version
+  # to avoid autocompletion issues with spyder version
   - pyzmq=24.0.1 
   - ipython=7.33
   
