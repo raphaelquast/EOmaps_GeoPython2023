@@ -11,7 +11,7 @@
 from eomaps import Maps
 
 m = Maps(crs=4326, figsize=(8, 4))
-m.set_extent((-50, 50, -20, 20), 3857)
+m.set_extent((-50, 50, -20, 20))
 
 m.add_feature.preset.coastline()
 m.add_feature.preset.ocean()
