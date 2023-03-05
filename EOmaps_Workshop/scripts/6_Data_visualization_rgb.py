@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
+
+Data visualization continued... RGB composites
+
+- A quick showcase how to create RGB (or RGBA) composites
+
+"""
+
 from eomaps import Maps
 
 path = r"datasets/BlueMarbleNG-TB_2004-12-01_rgb_360x180.TIFF"

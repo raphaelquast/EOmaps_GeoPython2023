@@ -30,15 +30,19 @@ m.cb.click.attach.mark(modifier=3, fc="b", radius=16, radius_crs=4326)
 
 ax = m.f.add_subplot(212)
 
-def cb(ID, pos, val, **kwargs):
+def cb(ID, pos, val, color="r", markersize=5, **kwargs):
     print("\nA custom callback!")
     print(ID, pos, val)
-    l, = ax.plot(*pos, marker="o")
-    #m.cb.pick.add_temporary_artist(l)
+    l, = ax.plot(*pos, marker="o", c=color, markersize=markersize)
+    # m.cb.pick.add_temporary_artist(l)
+
 
 m.cb.pick.attach(cb, button=3)
+m.cb.click.attach(cb, button=1, color="b", markersize=2)
+
 
 m.cb.pick.attach.mark(button=3, fc="none", ec="r", buffer=4)
 m.cb.pick.attach.annotate(button=3,
                           text = lambda val, **kwargs: f"the value is {val:.2f}"
                           )
+
