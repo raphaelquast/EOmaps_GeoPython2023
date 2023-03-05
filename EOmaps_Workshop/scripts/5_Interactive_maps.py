@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
+
+Turn your maps into interactive data analysis widgets
+
+- Click / Pick / Keypress callbacks
+- Pre-defined callbacks
+- Custom callbacks
+
+"""
+
 from eomaps import Maps
 import numpy as np
 
@@ -23,8 +34,11 @@ def cb(ID, pos, val, **kwargs):
     print("\nA custom callback!")
     print(ID, pos, val)
     l, = ax.plot(*pos, marker="o")
-
     #m.cb.pick.add_temporary_artist(l)
 
 m.cb.pick.attach(cb, button=3)
+
 m.cb.pick.attach.mark(button=3, fc="none", ec="r", buffer=4)
+m.cb.pick.attach.annotate(button=3,
+                          text = lambda val, **kwargs: f"the value is {val:.2f}"
+                          )

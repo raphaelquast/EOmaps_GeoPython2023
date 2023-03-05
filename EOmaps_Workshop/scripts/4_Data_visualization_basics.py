@@ -1,3 +1,16 @@
+# -*- coding: utf-8 -*-
+"""   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
+
+Data Visualization Basics
+
+- 1D / 2D Datasets
+- Data Classification
+- Plot "Shapes"
+- Colorbars
+- InsetMaps
+
+"""
+
 from eomaps import Maps
 import numpy as np
 
@@ -6,7 +19,7 @@ import numpy as np
 def data1D(s=500):
     lon = np.random.randint(-150, 150, s)
     lat = np.random.randint(-75, 68, s)
-    data = np.random.randint(0, 100, s)
+    data = np.random.normal(50, 20, s)
     return data, lon, lat
 
 
@@ -20,20 +33,19 @@ def data2D(sx=40, sy=30):
 def data1D2D(sx=20, sy=30):
     lon = np.linspace(-150, 150, sx)
     lat = np.linspace(-75, 68, sy)
-    data = np.random.randint(0, 10000, (lon.size, lat.size))
+    data = np.random.randint(0, 100, (lon.size, lat.size))
     return data, lon, lat
 
 
-#data, lon, lat = data1D(500)
+data, lon, lat = data1D(500)
 #data, lon, lat = data1D2D(50, 50)
-data, lon, lat = data1D2D(50,50)
+#data, lon, lat = data1D2D(50,50)
 
 m = Maps(figsize=(8, 6))
 m.add_feature.preset.coastline()
 
 m1 = m.new_layer()
 m1.set_data(data=data, x=lon, y=lat, crs=4326,
-            encoding=dict(scale_factor=1/10000, add_offset=0)
             )
 
 # m1.set_classify.EqualInterval(k=5)
@@ -48,9 +60,9 @@ m1.set_data(data=data, x=lon, y=lat, crs=4326,
 # m1.set_shape.scatter_points()
 # m1.set_shape.raster()
 
-m1.plot_map()                           # plot the map
+m1.plot_map(cmap="viridis", vmin=0, vmax=100)
 
-m1.add_colorbar()                       # add a colorbar
+m1.add_colorbar(hist_bins=20)
 
 
 
