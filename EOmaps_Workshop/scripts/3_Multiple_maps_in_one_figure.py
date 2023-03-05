@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
 
-Adding/arranging multiple maps in a single figure.
+Dealing with multiple maps and/or plots in a single figure.
 
 - Adding new maps/axes to the figure
 - InsetMaps
 - Re-positioning of axes
 - Using the Layout Editor                     >>> Keyboard Shortcut:  "alt + l"
+
 """
 
 from eomaps import Maps
@@ -35,7 +36,7 @@ m2i = m2.new_inset_map(xy=(-60, -15), radius=(35, 50),
                        indicate_extent=False)
 m2i.add_feature.physical.ocean(fc="lightblue")
 m2i.add_feature.physical.land(fc="g", ec="k")
-m2i.add_gridlines(lw=0.25)
+gl = m2i.add_gridlines(lw=0.25)
 
 for i in (m, m1, m2, m3, m5):
     m2i.indicate_inset_extent(i, fc=(1, 0, 0, 0.25))

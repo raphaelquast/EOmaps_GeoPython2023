@@ -3,10 +3,11 @@
 
 # Layer-management ... compare and combine plot-layers!
 
-- Initialize new layers
-- (transparently) overlay multiple layers
-- Compare layers - "peek-layer" callbacks
+- Create new layers
+- Combine and overlay multiple layers
+- Layer "peeking"
 - A first look at the "companion-widget"            >>> Keyboard Shortcut:  "w"
+
 """
 
 from eomaps import Maps

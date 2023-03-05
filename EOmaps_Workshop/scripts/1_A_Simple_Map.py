@@ -6,6 +6,7 @@
 - Map projections
 - Features from NaturalEarth (https://www.naturalearthdata.com/)
 - Gridlines, North-Arrows, Scalebars, Logos
+
 """
 
 from eomaps import Maps

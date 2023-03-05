@@ -19,7 +19,6 @@ m.cb.click.attach.mark(modifier=3, fc="b", radius=16, radius_crs=4326)
 
 ax = m.f.add_subplot(212)
 
-
 def cb(ID, pos, val, **kwargs):
     print("\nA custom callback!")
     print(ID, pos, val)
