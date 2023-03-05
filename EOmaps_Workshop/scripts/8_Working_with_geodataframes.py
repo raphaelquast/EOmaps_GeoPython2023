@@ -5,12 +5,12 @@ use_key = "MAPCOLOR13"
 
 # %% Working with GeoDataFrames
 
-def on_layer_activation(m, gdf, val, color="r"):   
+def on_layer_activation(m, gdf, val, color="r"):
     use_gdf = gdf[gdf[use_key] == val]
     m.add_gdf(use_gdf, fc=color, ec="none")
 
 # create a map
-m = Maps(layer="all")
+m = Maps(layer="coastlines")
 m.add_feature.preset.coastline()
 
 # load a dataframe from NaturalEarth
@@ -26,8 +26,8 @@ for name, (val, c) in options.items():
     mi = m.new_layer(name)
     mi.on_layer_activation(on_layer_activation, gdf=countries, val=val, color=c)
 
-# get a widget to select the layers 
-m.util.layer_selector(loc="upper center", 
+# get a widget to select the layers
+m.util.layer_selector(loc="upper center",
                       draggable=False,
                       layers=list(options),
                       title=use_key,
@@ -35,6 +35,8 @@ m.util.layer_selector(loc="upper center",
                       fontsize=9)
 
 m.subplots_adjust(bottom=0)
+
+m.show_layer(str(usevals[0]))
 
 # %%  GeoDataFrame picking
 
