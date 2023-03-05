@@ -21,10 +21,10 @@ This repository contains all files used in the EOmaps Workshop.
 If you don't want to install anything on your pc, you can use one of the following MyBinder links:
 
 
-- **Linux desktop + `spyder`** (preferred):
+- **Linux desktop + `spyder`** (preferred):  
   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/raphaelquast/EOmaps_GeoPython2023/desktop)
 
-- **JupyterLab**
+- **JupyterLab**  
   [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/raphaelquast/EOmaps_GeoPython2023/master)
 
 
