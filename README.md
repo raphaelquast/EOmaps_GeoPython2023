@@ -22,7 +22,7 @@ If you don't want to install anything on your pc, you can use one of the followi
 
 
 - **Linux desktop + `spyder`**:  
-  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/raphaelquast/EOmaps_GeoPython2023/desktop)
+  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/raphaelquast/EOmaps_GeoPython2023/master)
 
 
 <hr>
