@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
+
+Dealing with large datasets
+
+- Plotting a GeoTIFF (with automatic parsing of the colormap)
+- Set the extent prior to plotting to plot only data in the visible extent
+
+"""
+
 # %% Download the data
 
 # =========================================================================
@@ -15,10 +25,10 @@ else:
     s3_url_prefix = "https://esa-worldcover.s3.eu-central-1.amazonaws.com"
     url = rf"{s3_url_prefix}/v100/2020/map/{tilename}"
     r = requests.get(url, allow_redirects=True)
-    
+
     with open(savepath, 'wb') as f:
         f.write(r.content)
-        
+
 # =========================================================================
 
 # %% Create a map
@@ -37,8 +47,8 @@ m = Maps.from_file.GeoTIFF(
 m.add_gridlines()
 
 for i, r in enumerate([10, 50, 100, 200, 500, 1000, 2000]):
-    m.add_marker(xy=(7.6416665, 47.5350134), xy_crs=4326, 
-                 radius=r, shape="geod_circles", 
+    m.add_marker(xy=(7.6416665, 47.5350134), xy_crs=4326,
+                 radius=r, shape="geod_circles",
                  fc="none", ec="k", lw=(i+1)/3)
 
 m.add_annotation(xy=(7.6416665, 47.5350134), xy_crs=4326, text="GeoPython\n2023",

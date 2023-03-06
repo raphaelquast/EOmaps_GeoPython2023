@@ -3,7 +3,7 @@
 
 # Layer-management ... compare and combine plot-layers!
 
-- Create new layers
+- Create new layers    (layers are "lazy", they are only plotted if visible!)
 - Combine and overlay multiple layers
 - Layer "peeking"
 - A first look at the "companion-widget"            >>> Keyboard Shortcut:  "w"

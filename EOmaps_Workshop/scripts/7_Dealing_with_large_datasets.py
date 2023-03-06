@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
+
+Dealing with large datasets
+
+- Plotting raster-data
+- Using datashader
+
+"""
+
+
 from eomaps import Maps
 import numpy as np
 
@@ -20,7 +31,7 @@ m2.add_feature.preset.coastline()
 m2.inherit_data(m1)
 m2.set_shape.shade_raster()
 m2.plot_map()
-m2.add_colorbar(extend="neither", hist_bins=50, 
+m2.add_colorbar(extend="neither", hist_bins=50,
                 #dynamic_shade_indicator=True
                 )
 

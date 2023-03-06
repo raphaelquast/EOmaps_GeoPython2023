@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""   EOmaps GeoPython 2023          ( https://github.com/raphaelquast/EOmaps )
+
+Working with Geopandas GeoDataFrames
+
+- Plotting GeoDataFrames
+- Making GeoDataFrames interactive
+
+"""
+
 from eomaps import Maps
 import matplotlib.pyplot as plt
 
@@ -46,10 +56,10 @@ m2 = Maps(Maps.CRS.Mollweide())
 m2.add_feature.preset.coastline()
 
 m2.add_gdf(countries[countries[use_key] > 0], ec="k", column=use_key,
-           cmap="tab20", picker_name="key")
+           cmap="tab20", picker_name="my_gdf_picker")
 
 def text(m, ID, val, pos, ind):
     return f"{countries.loc[ID].NAME}\n{use_key} = {val}"
 
-m2.cb.pick__key.attach.annotate(text=text)
-m2.cb.pick__key.attach.highlight_geometry(ec="r", lw=2, fc="none")
+m2.cb.pick["my_gdf_picker"].attach.annotate(text=text)
+m2.cb.pick["my_gdf_picker"].attach.highlight_geometry(ec="r", lw=2, fc="none")
