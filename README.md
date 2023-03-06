@@ -29,5 +29,4 @@ If you don't want to install anything on your pc, you can use one of the followi
 <hr>
 
 
-Thanks to the Spyder devs for providing a example repository on how to setup binder + spyder.
-(https://github.com/spyder-ide/binder-environments/tree/spyder-stable)
+Thanks to the [Spyder](https://github.com/spyder-ide/spyder) team for providing an example repository on how to setup [binder + spyder](https://github.com/spyder-ide/binder-environments/tree/spyder-stable)
