@@ -1,0 +1,23 @@
+name: EOmaps
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - matplotlib=3.6.3
+  - numpy=1.23.5
+  - eomaps
+  - ipympl
+  - netcdf4
+  - rioxarray
+  - pip
+  - spyder
+  # avoid autocompletion issues with spyder version
+  - pyzmq=24.0.1
+  - ipython=7.33
+
+  # Required for jupyter-desktop-server
+  - websockify
+  - nbgitpuller
+  - pip:
+    - jupyter-desktop-server

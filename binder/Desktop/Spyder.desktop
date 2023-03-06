@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Spyder
+Exec=spyder --project /home/jovyan/EOmaps_Workshop /home/jovyan/EOmaps_Workshop/a_simple_map.py
+Icon=/home/jovyan/binder/spyder/spyder.svg
+Path=/home/jovyan/Desktop
