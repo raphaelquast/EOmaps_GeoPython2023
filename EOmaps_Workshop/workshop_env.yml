@@ -4,11 +4,11 @@ channels:
 
 dependencies:
   - python=3.9
-  - matplotlib=3.6.3
-  - numpy=1.23.5
-  - eomaps=6.1.1
+  - eomaps
+  - matplotlib
   - netcdf4
   - rioxarray
+  - numpy=1.23.5
   # for the spyder IDE
   - spyder
   - pyzmq=24.0.1 
