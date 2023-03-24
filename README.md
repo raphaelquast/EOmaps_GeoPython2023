@@ -13,6 +13,8 @@ This repository contains all files used in the EOmaps Workshop.
 2. **Create a new environment** from the `.yml` file:
     `mamba create -f "EOmaps_Workshop/workshop_env.yml"`
 
+#### 🌍 For more information have a look at the [EOmaps Workshop Notebook](https://github.com/raphaelquast/EOmaps_GeoPython2023/blob/master/EOmaps_Workshop/EOmaps_workshop.ipynb)
+
 
 <hr>
 
