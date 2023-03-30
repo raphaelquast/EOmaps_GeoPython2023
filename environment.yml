@@ -6,7 +6,7 @@ dependencies:
   - python=3.9
   - matplotlib
   - numpy=1.23.5
-  - eomaps
+  - eomaps=6.3
   - ipympl
   - netcdf4
   - rioxarray
