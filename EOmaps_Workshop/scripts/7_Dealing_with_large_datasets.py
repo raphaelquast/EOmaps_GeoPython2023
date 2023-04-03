@@ -3,7 +3,7 @@
 
 Dealing with large datasets
 
-- Plotting raster-data
+- Plotting large raster-data
 - Using datashader
 
 """
@@ -32,7 +32,7 @@ m2.inherit_data(m1)
 m2.set_shape.shade_raster()
 m2.plot_map()
 m2.add_colorbar(extend="neither", hist_bins=50,
-                #dynamic_shade_indicator=True
+                # dynamic_shade_indicator=True
                 )
 
 m.util.layer_selector(layers=[m1.layer, m2.layer], ncol=2, fontsize=7)

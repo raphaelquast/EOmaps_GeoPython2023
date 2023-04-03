@@ -26,9 +26,10 @@ m2 = m.new_layer("ocean")
 m2.add_feature.preset.ocean()
 m2.add_marker(xy=(-50, -30), radius=20, ec="k", fc="#58419c", permanent=True)
 
-m.show_layer("land")                           # show an individual layer
-m.show_layer("ocean", "land", "base")          # overlay multiple layers
-m.show_layer("ocean", ("land", 0.5), "base")   # transparent overlays
-
-# adding WebMap layers
+# use the "layer" kwarg to put a WebMap on a dedicated layer
 m.add_wms.OpenStreetMap.add_layer.default(layer="OSM_WMS")
+
+#m.show_layer("land")                           # show an individual layer
+#m.show_layer("ocean", "land", "base")          # overlay multiple layers
+#m.show_layer("ocean", ("land", 0.5), "base")   # transparent overlays
+
