@@ -1,6 +1,6 @@
 dependencies:
-- python <3.9
-- spyder 5.4.2
+- python=3.9
+- spyder
 - cython
 - matplotlib
 - pandas
@@ -9,7 +9,7 @@ dependencies:
 - scipy
 - sympy
 # EOmaps Workshop dependencies
-- eomaps=6.1.1
+- eomaps
 - netcdf4
 - rioxarray
 - spyder
