@@ -20,7 +20,6 @@ def read_data(ID):
     n = np.random.randint(0, 100)
     return np.linspace(-100, 100, n), np.random.randint(-50, 50, n)
 
-
 m = Maps(ax=211)
 m.add_feature.preset.coastline()
 m.set_data(data, lon, lat)
@@ -32,15 +31,15 @@ ax = m.f.add_subplot(212)
 
 m.cb.click.attach.annotate()
 
-m.cb.pick.attach.annotate(button=3,
-                          text = lambda val, **kwargs: f"the value is {val:.2f}"
-                          )
-
 m.cb.click.attach.mark(modifier=1, fc="r", radius=4, radius_crs=4326)
 m.cb.click.attach.mark(modifier=2, fc="g", radius=8, radius_crs=4326)
 m.cb.click.attach.mark(modifier=3, fc="b", radius=16, radius_crs=4326)
 
-m.cb.pick.attach.mark(button=3, fc="none", ec="r", buffer=4)
+m.cb.pick.attach.annotate(button=3,
+                          text = lambda val, **kwargs: f"the value is {val:.2f}"
+                          )
+
+m.cb.pick.attach.mark(button=3, fc="none", ec="r", buffer=1)
 
 
 # %% custom callbacks
@@ -53,7 +52,7 @@ def click_cb(ID, pos, val, color="r", markersize=5, **kwargs):
 def pick_cb(ID, pos, val, **kwargs):
     x, y = read_data(ID)
     l, = ax.plot(x, y)
-    m.cb.pick.add_temporary_artist(l)
+    # m.cb.pick.add_temporary_artist(l)
 
 
 m.cb.click.attach(click_cb, button=1, color="b", markersize=2)
