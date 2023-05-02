@@ -26,7 +26,7 @@ m.add_compass(pos=(.105, .76), scale=12, style="north arrow")
 
 s = m.add_scalebar(
     auto_position=(0.68, 0.25),
-    autoscale_fraction=0.45,
+    autoscale_fraction=0.25,
     patch_props=dict(fc="#d8dace", ec="none", alpha=0.75))
 
 m.add_logo()
